@@ -3,6 +3,10 @@ import fetch from "node-fetch";
 
 const app = express();
 
+app.get("/", (req, res) => {
+    res.send("Hello from the server!");
+})
+
 app.get("/api/reverse-geocode", async (req, res) => {
   const { lat, lon } = req.query;
 
